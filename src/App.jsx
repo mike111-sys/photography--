@@ -1,5 +1,10 @@
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Technologies from "./components/Technologies";
 
 const App = () => {
   return (
@@ -14,10 +19,11 @@ const App = () => {
         <div className="container mx-auto px-8">
           <Navbar />
           <Hero />
-          {/* Additional content to fill the page */}
-          <div className="py-8">
-            <p>Your content goes here...</p>
-          </div>
+          <About />
+        <Technologies />
+        <Experience />
+         <Projects />
+         <Contact />
         </div>
       </div>
     </div>
