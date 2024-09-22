@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main # Branch where content is stored in Git
+media_folder: "../../assets/projects" # Media folder for uploaded images
+public_folder: "/public" # Path to access media files
+
+collections:
+  - name: "portfolio" # Unique identifier for this collection
+    label: "Portfolio" # Label in the CMS
+    folder: "../../components" # Folder where the content is stored
+    create: true # Allow users to create new content
+    slug: "{{slug}}" # How files will be named (slug from the name field)
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true} # Text input for Name
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+          hint: "Enter a brief description.",
+        } # Text input for description
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          required: true,
+          media_library: { allow_multiple: false },
+          hint: "Upload an image file.",
+        } # Image upload field
